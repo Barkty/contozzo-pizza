@@ -11,6 +11,7 @@ builder.Services.AddSwaggerGen();
 // Add the PizzaContext
 builder.Services.AddSqlite<PizzaContext>("Data Source=ContosoPizza.db");
 // Add the PromotionsContext
+builder.Services.AddSqlite<PromotionsContext>("Data Source=./Promotions/Promotions.db");
 
 builder.Services.AddScoped<PizzaService>();
 
@@ -30,5 +31,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Add the CreateDbIfNotExists method call
+app.CreateDbIfNotExists();
 
 app.Run();
