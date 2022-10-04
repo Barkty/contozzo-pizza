@@ -9,6 +9,7 @@ namespace ContosoPizza.Controllers;
 [Route("[controller]")]
 public class CouponController : ControllerBase
 {
+    //Dependency Injection -> Controller consuming the service
     PromotionsContext _context;
 
     public CouponController(PromotionsContext context)

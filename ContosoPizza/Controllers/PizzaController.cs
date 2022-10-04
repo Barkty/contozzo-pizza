@@ -8,6 +8,7 @@ namespace ContosoPizza.Controllers;
 [Route("[controller]")]
 public class PizzaController : ControllerBase
 {
+    //Dependency Injection -> Controller consuming the service
     PizzaService _service;
     
     public PizzaController(PizzaService service)
